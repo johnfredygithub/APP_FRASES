@@ -15,7 +15,7 @@ export const AppDataSource = new DataSource({
   ssl:
     process.env.DATABASE_SSL === 'true'
       ? {
-          ca: readFileSync('./src/database/ca.crt').toString(),
+          ca: readFileSync('./database/ca.crt').toString(),
         }
       : false,
   entities: [User, Phrase, Category],
